@@ -1,12 +1,12 @@
 
-import About from './components/About/AboutUs'
-import Home from './Pages/Home'
-import SystemDetail from './components/Programs/Program'
+import About from './components/About/AboutUs.jsx'
+import Home from './Pages/Home.jsx'
+import SystemDetail from './components/Programs/Program.jsx'
 import { Route,Routes} from 'react-router-dom'
-import SystemPage from './Pages/SystemPage'
-import Journey from './Components/Journey/Journey'
-import Activate from './Components/Activate/Activate'
-import ScrollToTop from './Common/ScrolltoTop'
+import SystemPage from './Pages/SystemPage.jsx'
+import Journey from './Components/Journey/Journey.jsx'
+import Activate from './Components/Activate/Activate.jsx'
+import ScrollToTop from './Common/ScrolltoTop.jsx'
 
 const PageRoutes = () => {
   return (
