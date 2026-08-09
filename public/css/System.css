@@ -1,0 +1,385 @@
+/* =========================
+   SYSTEM CARDS
+========================= */
+
+.systems-scroll-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+.system-card {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.system-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+
+/* =========================
+   BIG BACK NUMBER
+========================= */
+
+.bg-number {
+  position: absolute;
+  top: 5px;
+  right: 18px;
+  font-size: clamp(70px, 6vw, 100px);
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.card-image {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.card-image img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.card-content h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #aaa;
+  margin: 0 0 20px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+
+.btn,
+.card-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+
+/* =========================
+   PREVIEW BUTTON
+========================= */
+
+.btn.preview {
+  background: transparent;
+  border: 1px solid #a855f7;
+  color: #a855f7;
+}
+
+.btn.preview:hover {
+  background: #a855f7;
+  color: #fff;
+}
+
+
+/* =========================
+   EXPLORE BUTTON
+========================= */
+
+.card-buttons a {
+  background: linear-gradient(
+    90deg,
+    #deb61a,
+    #5f1c9d
+  );
+  color: white;
+}
+
+.card-buttons a:hover {
+  opacity: 0.85;
+}
+
+.view-all-button-container {
+  text-align: center;
+}
+.view-all-button{
+  margin:auto;
+  background: linear-gradient(90deg, #deb61a, #5f1c9d);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+
+/* =========================
+   LARGE LAPTOP
+   1440px - 1200px
+========================= */
+
+@media (max-width: 1200px) {
+
+  .systems-scroll-wrapper {
+    gap: 20px;
+  }
+
+  .system-card {
+    padding: 18px;
+  }
+
+  .card-image img {
+    height: 220px;
+  }
+
+  .card-content h3 {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================
+   TABLET / SMALL LAPTOP
+   1199px - 769px
+========================= */
+
+@media (max-width: 1024px) {
+
+  .systems-scroll-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .card-image img {
+    height: 230px;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+   768px
+========================= */
+
+@media (max-width: 768px) {
+
+  .systems-scroll-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .system-card {
+    padding: 15px;
+    border-radius: 16px;
+  }
+
+  .card-image img {
+    height: 200px;
+    border-radius: 12px;
+  }
+
+  .bg-number {
+    font-size: 70px;
+    right: 12px;
+  }
+
+  .card-content h3 {
+    font-size: 16px;
+  }
+
+  .card-content p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .card-buttons {
+    gap: 8px;
+  }
+
+  .btn,
+  .card-buttons a {
+    min-height: 38px;
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   650px
+========================= */
+
+@media (max-width: 650px) {
+
+  .systems-scroll-wrapper {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .system-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .card-image img {
+    height: 220px;
+  }
+
+  .bg-number {
+    font-size: 80px;
+    top: 8px;
+    right: 15px;
+  }
+
+  .card-content h3 {
+    font-size: 17px;
+  }
+
+  .card-content p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+   480px
+========================= */
+
+@media (max-width: 480px) {
+
+  .systems-scroll-wrapper {
+    gap: 15px;
+  }
+
+  .system-card {
+    padding: 14px;
+  }
+
+  .card-image img {
+    height: 200px;
+    margin-bottom: 12px;
+  }
+
+  .bg-number {
+    font-size: 65px;
+  }
+
+  .card-content h3 {
+    font-size: 16px;
+  }
+
+  .card-content p {
+    font-size: 12.5px;
+    margin-bottom: 14px;
+  }
+
+  .card-buttons {
+    width: 100%;
+  }
+
+  .btn,
+  .card-buttons a {
+    flex: 1;
+    width: 100%;
+    min-height: 40px;
+  }
+
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+   320px
+========================= */
+
+@media (max-width: 360px) {
+
+  .systems-scroll-wrapper {
+    gap: 12px;
+  }
+
+  .system-card {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .card-image img {
+    height: 170px;
+    border-radius: 10px;
+  }
+
+  .bg-number {
+    font-size: 55px;
+    right: 10px;
+  }
+
+  .card-content h3 {
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  .card-content p {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .btn,
+  .card-buttons a {
+    font-size: 11px;
+    padding: 8px 9px;
+  }
+
+}

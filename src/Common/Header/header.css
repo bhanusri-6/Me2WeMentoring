@@ -1,0 +1,547 @@
+/* =========================================================
+   M2W HEADER
+   1440px → 320px Responsive
+   ========================================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 82px;
+
+  z-index: 99999;
+
+  background: #0b0616;
+
+  border-bottom: 1px solid rgba(255, 216, 77, 0.08);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.45),
+    0 0 30px rgba(157, 78, 221, 0.06);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* =========================================================
+   HEADER INNER
+   ========================================================= */
+
+.site-header-inner {
+  width: 100%;
+
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.site-header-logo {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+}
+
+.site-header-logo a {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.site-header-logo img {
+  width: 95px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.site-header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+
+  margin: 0 40px;
+}
+
+.site-header-nav ul {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 42px;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.site-header-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.site-header-nav a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 16px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* NAV UNDERLINE */
+
+.site-header-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #ffd84d,
+    #9d4edd
+  );
+
+  box-shadow:
+    0 0 10px rgba(255, 216, 77, 0.35);
+
+  transition: width 0.3s ease;
+}
+
+.site-header-nav a:hover {
+  color: #ffd84d;
+
+  transform: translateY(-1px);
+}
+
+.site-header-nav a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.site-header-right {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: flex-end;
+}
+
+
+/* PHONE */
+
+.site-header-phone {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
+}
+
+.site-header-phone span {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 13px;
+}
+
+.site-header-phone i {
+  color: #ffd84d;
+
+  font-size: 14px;
+}
+
+.site-header-phone a {
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.site-header-phone a:hover {
+  color: #ffd84d;
+}
+
+
+/* =========================================================
+   MOBILE TOGGLE
+   ========================================================= */
+
+.site-header-toggle {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 216, 77, 0.18);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.site-header-toggle span {
+  width: 21px;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.site-header-toggle:hover {
+  background: rgba(255, 216, 77, 0.08);
+
+  border-color: rgba(255, 216, 77, 0.35);
+}
+
+
+/* =========================================================
+   HAMBURGER → X
+   ========================================================= */
+
+.site-header-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.site-header-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.site-header-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .site-header-inner {
+    padding: 0 30px;
+  }
+
+  .site-header-nav {
+    margin: 0 25px;
+  }
+
+  .site-header-nav ul {
+    gap: 25px;
+  }
+
+  .site-header-nav a {
+    font-size: 15px;
+  }
+
+  .site-header-phone span {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   991px
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+  .site-header {
+    height: 76px;
+  }
+
+  .site-header-inner {
+    height: 76px;
+
+    padding: 0 25px;
+  }
+
+
+  /* LOGO */
+
+  .site-header-logo img {
+    width: 88px;
+  }
+
+
+  /* HIDE PHONE */
+
+  .site-header-phone {
+    display: none;
+  }
+
+
+  /* SHOW TOGGLE */
+
+  .site-header-toggle {
+    display: flex;
+  }
+
+
+  /* NAV */
+
+  .site-header-nav {
+    position: absolute;
+
+    top: 76px;
+    left: 0;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0 25px;
+
+    display: block;
+
+    background: rgba(11, 6, 22, 0.98);
+
+    border-top: 1px solid rgba(255, 216, 77, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.5);
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+
+  /* OPEN */
+
+  .site-header-nav.is-open {
+    max-height: 500px;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+
+  .site-header-nav ul {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 15px 0 20px;
+  }
+
+
+  .site-header-nav li {
+    width: 100%;
+  }
+
+
+  .site-header-nav a {
+    width: 100%;
+
+    padding: 15px 10px;
+
+    font-size: 16px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+
+  .site-header-nav li:last-child a {
+    border-bottom: none;
+  }
+
+
+  .site-header-nav a::after {
+    bottom: 5px;
+  }
+
+}
+
+
+/* =========================================================
+   767px
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  .site-header-inner {
+    padding: 0 20px;
+  }
+
+  .site-header-logo img {
+    width: 82px;
+  }
+
+}
+
+
+/* =========================================================
+   576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+  .site-header {
+    height: 70px;
+  }
+
+  .site-header-inner {
+    height: 70px;
+
+    padding: 0 16px;
+  }
+
+  .site-header-logo img {
+    width: 78px;
+  }
+
+  .site-header-nav {
+    top: 70px;
+
+    padding: 0 16px;
+  }
+
+  .site-header-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   400px
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .site-header-inner {
+    padding: 0 12px;
+  }
+
+  .site-header-logo img {
+    width: 72px;
+  }
+
+  .site-header-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .site-header-toggle span {
+    width: 19px;
+  }
+
+}
+
+
+/* =========================================================
+   320px
+   ========================================================= */
+
+@media (max-width: 320px) {
+
+  .site-header-inner {
+    padding: 0 10px;
+  }
+
+  .site-header-logo img {
+    width: 68px;
+  }
+
+  .site-header-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+}
