@@ -1,7 +1,7 @@
 
-import About from './components/About/AboutUs.jsx'
+import About from './Components/About/AboutUsPage.jsx'
 import Home from './Pages/Home.jsx'
-import SystemDetail from './components/Programs/Program.jsx'
+import SystemDetail from './Components/Programs/ProgramDetailedpage.jsx'
 import { Route,Routes} from 'react-router-dom'
 import SystemPage from './Pages/SystemPage.jsx'
 import Journey from './Components/Journey/Journey.jsx'
