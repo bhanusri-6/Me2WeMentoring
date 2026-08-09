@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Modal from "./Modal";
 import "../../../public/css/System.css";
 
-const API_URL = "http://localhost:5000/api/therapies";
+const API_URL = `${import.meta.env.Vite_Api_Url}/api/therapies`;
 
 const Systemsection = ({ showAll = false }) => {
   const [data, setData] = useState([]);
