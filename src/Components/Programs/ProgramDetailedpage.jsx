@@ -51,7 +51,7 @@ const SystemDetail = () => {
       <div className="hero">
 
         <img
-          src={`http://localhost:5000${system.thumbnail}`}
+          src={`${import.meta.env.VITE_API_URL}${system.thumbnail}`}
           alt={system.title}
           className="hero-image"
         />
