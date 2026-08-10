@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const API_URL = `${import.meta.env.Vite_Api_Url}/api`;
-const IMAGE_URL = `${import.meta.env.Vite_Api_Url}`;
+const API_URL = `${import.meta.env.VITE_API_URL}/api`;
+const IMAGE_URL = `${import.meta.env.VITE_API_URL}`;
 
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
