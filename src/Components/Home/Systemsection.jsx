@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Modal from "./Modal";
 import "../../../public/css/System.css";
 
-const API_URL = `${import.meta.env.VITE_API_URL}/api/therapies`;
+const API_URL = `${import.meta.env.Vite_Api_Url}/api/therapies`;
 
 const Systemsection = ({ showAll = false }) => {
   const [data, setData] = useState([]);
@@ -70,7 +70,7 @@ const Systemsection = ({ showAll = false }) => {
             {/* Image */}
             <div className="card-image">
               <img
-                src={`${import.meta.env.VITE_API_URL}${item.thumbnail}`}
+                src={`http://localhost:5000${item.thumbnail}`}
                 alt={item.title}
 
               />
