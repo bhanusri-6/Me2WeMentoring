@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Program.css";
 
-const API_URL = `${import.meta.env.Vite_Api_Url}/api/therapies`;
+const API_URL = "http://localhost:5000/api/therapies";
 
 const SystemDetail = () => {
   const { id } = useParams();
